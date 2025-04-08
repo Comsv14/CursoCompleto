@@ -1,0 +1,163 @@
+Práctica: Etiquetas 1
+
+<!DOCTYPE html>
+    <head>
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <b>Este es un texto en negrita</b>
+        <i>Este es un texto en cursiva</i>
+        <u>Este es un texto subrayado</u>
+    </body>
+</html>
+
+
+Práctica: Etiquetas 2
+
+<!DOCTYPE html>
+    <head>
+        <title>Ejercicio 2</title>
+    </head>
+    <body>
+        <small>Este es un texto pequeño</small>
+        <strong>Este es un texto fuerte</strong>
+        <del>Este es un texto tachado</del>
+    </body>
+</html>
+
+
+Práctica: Etiquetas Anidadas 1
+
+<!DOCTYPE html>
+    <head>
+        <title>Etiquetas Anidadas 1</title>
+    </head>
+    <body>
+        <small>Esta <b>palabra</b> está en negrita y esta <i>palabra</i> está en cursiva</small>
+    </body>
+</html>
+
+
+Práctica: Etiquetas Anidadas 2
+
+<!DOCTYPE html>
+    <head>
+        <title>Etiquetas Anidadas 2</title>
+    </head>
+    <body>
+        <i>Esta <del>palabra</del> está tachada y esta <u>palabra</u> está subrayada</i>
+    </body>
+</html>
+
+
+Práctica: Texto 1
+
+<!DOCTYPE html>
+    <head>
+        <title>Texto 1</title>
+    </head>
+    <body>
+        <p>Parrafo uno</p>
+        <p>Parrafo dos</p>
+        <br>
+        <p>Parrafo tres</p>
+    </body>
+</html>
+
+
+Práctica: Texto 2
+
+<!DOCTYPE html>
+    <head>
+        <title>Texto 2</title>
+    </head>
+    <body>
+        <pre>
+            Las
+ 
+                etiquetas
+ 
+                          de
+ 
+                                cierre 
+ 
+                                            son 
+ 
+                                                   &lt;&#47;&gt;
+        </pre>
+    </body>
+</html>
+
+
+Práctica: Encabezados 1
+
+<!DOCTYPE html>
+    <head>
+        <title>Encabezados 1</title>
+    </head>
+    <body>
+        <h1>Primer encabezado</h1>
+        <h6>Último encabezado</h6>
+    </body>
+</html>
+
+
+Práctica: Encabezados 2
+
+<!DOCTYPE html>
+    <head>
+        <title>Encabezados 2</title>
+    </head>
+    <body>
+        <h2>Segundo encabezado</h2>
+        <h4>Cuarto encabezado</h4>
+    </body>
+</html>
+
+
+Práctica: Imágenes 1
+
+<!DOCTYPE html>
+    <head>
+        <title>Imagenes 1</title>
+    </head>
+    <body>
+        <img src="https://drive.google.com/uc?export=view&id=18kt4S8N_KyZblSMKQRAELUT5fZ3t7hbz" width="200">
+    </body>
+</html>
+
+
+Práctica: Imágenes 2
+
+<!DOCTYPE html>
+    <head>
+        <title>Imagenes 2</title>
+    </head>
+    <body>
+        <img src="https://drive.google.com/uc?export=view&id=1w_Bxw_AJRre0DMgX-4T8WTqHnvo645s0" width="50%" alt="Pueblo de Italia">
+    </body>
+</html>
+
+
+Práctica: Enlaces 1
+
+<!DOCTYPE html>
+    <head>
+        <title>Enlaces 1</title>
+    </head>
+    <body>
+        <p>Haga <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">click aquí</a> para la redirección</p>
+    </body>
+</html>
+
+
+Práctica: Enlaces 2
+
+<!DOCTYPE html>
+    <head>
+        <title>Enlaces 2</title>
+    </head>
+    <body>
+        <a href="https://www.google.com" target="_blank">Click aqui</a>
+    </body>
+</html>
