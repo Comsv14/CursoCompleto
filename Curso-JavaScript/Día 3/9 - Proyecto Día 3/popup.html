@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog::backdrop { 
+            background: rgba(0, 0, 0, 0.5); 
+        }
+        dialog { 
+            max-width: 50vw; 
+            padding: 20px; 
+            border-radius: 8px; 
+        }       
+
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi página web</h1>
+ <p>Aquí encontrarás toda la información que necesitas.</p> 
+<button id="btnAbrirModal">Abrir pop up</button>
+ <dialog id="miPopUp">
+         <p>Este es el contenido de tu pop up en HTML.</p> 
+         <button id="btnCerrarModal">Cerrar</button>
+ </dialog>
+
+ <script>
+    const btnAbrirModal = document.getElementById('btnAbrirModal'); 
+const btnCerrarModal = document.getElementById('btnCerrarModal'); 
+const miPopUp = document.getElementById('miPopUp'); 
+
+btnAbrirModal.addEventListener('click', () => { 
+        miPopUp.showModal(); 
+}); 
+
+btnCerrarModal.addEventListener('click', () => { 
+       miPopUp.close(); 
+});
+ </script>
+</body>
+</html>
+
+
+ 

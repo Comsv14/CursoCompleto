@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Del Dia 3</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="comenzarCuentaAtras()">
+    <h1>¡Intenta responder lo mas rapido que puedas! <span id="cuentaAtras"></span></h1>
+    <p>¿Qué dia es el Día de los Inocentes?</p>
+    <input type="text" id="respuesta1">
+
+    <p>¿En qué año ganó España la Copa del Mundo?</p>
+    <input type="number" id="respuesta2">
+
+    <p>¿En que continente se encuentra la Republica Independiente del Congo Libre?</p>
+    <input type="text" id="respuesta3">
+
+    <p>¿Cuántos pokemon podemos encontrar en la primera generación de Pokemon?</p>
+    <input type="number" id="respuesta4">
+
+    <p>¿Te gusta JavaScript?</p>
+    <input type="text" id="respuesta5">
+    <br></br>
+    <button onclick="terminar()">Terminar Intento</button>
+    <br></br>
+    <button onclick="reintentar()">Reintentar Intento</button>
+
+    <audio id="audioFinal">
+        <source src="gameover.mp3" type="audio/mpeg">
+        Sonido no habilitado
+    </audio>
+    
+    <script>
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+
+        function comenzarCuentaAtras(){
+            tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+            intervaloDeTiempo = setInterval(ticTac, 1000);
+
+            document.getElementById("cuentaAtras").textContent = 30;
+        }
+
+        function ticTac(){
+            let tiempo = document.getElementById("cuentaAtras").textContent;
+            document.getElementById("cuentaAtras").textContent = tiempo -1;
+        }
+
+        function tiempoCumplido(){
+            clearInterval(intervaloDeTiempo);
+            document.getElementById("cuentaAtras").textContent = 0;
+            document.getElementById("audioFinal").play();
+            alert ("GAME OVER: Se acabó el tiempo. Inenta nuevamente.");
+        }
+        function terminar(){
+            clearTimeout(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+            
+            let fecha = new Date();
+            let respuesta1 = document.getElementById("respuesta1").value;
+            let respuesta2 = document.getElementById("respuesta2").value;
+            let respuesta3 = document.getElementById("respuesta3").value;
+            let respuesta4 = document.getElementById("respuesta4").value;
+            let respuesta5 = document.getElementById("respuesta5").value;
+
+            let mensaje = fecha.toLocaleDateString("es-ES") +"\n" + 
+                "1. " +respuesta1 + "\n"+
+                "2. " +respuesta2 + "\n"+
+                "3. " +respuesta3 + "\n"+
+                "4. " +respuesta4 + "\n"+
+                "5. " +respuesta5;
+            alert(mensaje);
+        }
+
+        function reintentar(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>
