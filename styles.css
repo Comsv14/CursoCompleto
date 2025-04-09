@@ -1,0 +1,45 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image:url(Fotos/estanque.jpg) ;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    color: black;
+    
+}
+.texto-marcado, .menu a{
+    text-shadow: 1px  0px 0px white,
+               0px  1px 0px  white,
+              -1px  0px 0px  white,
+               0px -1px 0px  white;
+
+}
+.centrar-texto{
+    text-align: center;
+}
+#subtitulo{
+    text-decoration: underline;
+}
+#subtitulo::first-letter{
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bold;
+}
+.foto{
+    border: 3px;
+    border-style: solid;
+    border-color: blue;
+    padding: 5px;
+}
+.texto-negrita{
+    font-weight: bold;
+}
+.menu a[href]{
+    color:black;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: rgb(198, 66, 255);
+    text-decoration-line: underline;
+}
