@@ -7,53 +7,85 @@
     <link rel="stylesheet" href="misEstilos.css">
 </head>
 <body onload="comenzarCuentaAtras()">
-    <h1>¡Intenta responder lo mas rapido que puedas! <span id="cuentaAtras"></span></h1>
-    <p>¿Qué dia es el Día de los Inocentes?</p>
+    <h1>¡Intenta responder lo más rápido que puedas! <span id="cuentaAtras"></span></h1>
+    
+    <p>¿Qué día es el Día de los Inocentes?</p>
     <input type="text" id="respuesta1">
 
     <p>¿En qué año ganó España la Copa del Mundo?</p>
     <input type="number" id="respuesta2">
 
-    <p>¿En que continente se encuentra la Republica Independiente del Congo Libre?</p>
+    <p>¿En qué continente se encuentra la República Independiente del Congo Libre?</p>
     <input type="text" id="respuesta3">
 
-    <p>¿Cuántos pokemon podemos encontrar en la primera generación de Pokemon?</p>
+    <p>¿Cuántos Pokémon podemos encontrar en la primera generación de Pokémon?</p>
     <input type="number" id="respuesta4">
 
     <p>¿Te gusta JavaScript?</p>
     <input type="text" id="respuesta5">
-    <br></br>
-    <button onclick="terminar()">Terminar Intento</button>
-    <br></br>
+    
+    <br><br>
+    <button onclick="terminar()" id="btnAbrirModal">Terminar Intento</button>
+    <br><br>
     <button onclick="reintentar()">Reintentar Intento</button>
+
+    <button id="btnAbrirModalTiempo" style="display: none;"></button>
 
     <audio id="audioFinal">
         <source src="gameover.mp3" type="audio/mpeg">
         Sonido no habilitado
     </audio>
+
+    <dialog id="miPopUp">
+        <div id="respuestaspop">Meter aquí las respuestas</div> 
+        <button id="btnCerrarModal">Cerrar</button>
+    </dialog>
     
     <script>
         let tiempoTerminado;
         let intervaloDeTiempo;
 
+        const btnAbrirModal = document.getElementById('btnAbrirModal'); 
+        const btnAbrirModalTiempo = document.getElementById('btnAbrirModalTiempo'); // nuevo botón oculto
+        const btnCerrarModal = document.getElementById('btnCerrarModal'); 
+        const miPopUp = document.getElementById('miPopUp'); 
+
+        btnAbrirModal.addEventListener('click', () => { 
+            miPopUp.showModal(); 
+        });
+
+        btnAbrirModalTiempo.addEventListener('click', () => { 
+            miPopUp.showModal(); 
+        });
+
+        btnCerrarModal.addEventListener('click', () => { 
+            miPopUp.close(); 
+        });
+
         function comenzarCuentaAtras(){
             tiempoTerminado = setTimeout(tiempoCumplido, 30000);
             intervaloDeTiempo = setInterval(ticTac, 1000);
-
             document.getElementById("cuentaAtras").textContent = 30;
         }
 
         function ticTac(){
             let tiempo = document.getElementById("cuentaAtras").textContent;
-            document.getElementById("cuentaAtras").textContent = tiempo -1;
+            document.getElementById("cuentaAtras").textContent = tiempo - 1;
         }
 
         function tiempoCumplido(){
             clearInterval(intervaloDeTiempo);
             document.getElementById("cuentaAtras").textContent = 0;
             document.getElementById("audioFinal").play();
-            alert ("GAME OVER: Se acabó el tiempo. Inenta nuevamente.");
+
+            let fecha = new Date();
+            let parrafo = document.getElementById("respuestaspop");
+            let mensaje = fecha.toLocaleDateString("es-ES") + "<br>GAME OVER. Inténtalo de nuevo";
+            parrafo.innerHTML = mensaje;
+
+            btnAbrirModalTiempo.click();
         }
+
         function terminar(){
             clearTimeout(tiempoTerminado);
             clearInterval(intervaloDeTiempo);
@@ -65,13 +97,15 @@
             let respuesta4 = document.getElementById("respuesta4").value;
             let respuesta5 = document.getElementById("respuesta5").value;
 
-            let mensaje = fecha.toLocaleDateString("es-ES") +"\n" + 
-                "1. " +respuesta1 + "\n"+
-                "2. " +respuesta2 + "\n"+
-                "3. " +respuesta3 + "\n"+
-                "4. " +respuesta4 + "\n"+
-                "5. " +respuesta5;
-            alert(mensaje);
+            let parrafo = document.getElementById("respuestaspop");
+            let mensaje = fecha.toLocaleDateString("es-ES") + "<br>Aquí están tus respuestas:<br>" +
+                "1. " + respuesta1 + "<br>" +
+                "2. " + respuesta2 + "<br>" +
+                "3. " + respuesta3 + "<br>" +
+                "4. " + respuesta4 + "<br>" +
+                "5. " + respuesta5 + "<br>";
+
+            parrafo.innerHTML = mensaje;
         }
 
         function reintentar(){
