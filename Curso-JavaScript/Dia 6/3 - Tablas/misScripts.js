@@ -2,7 +2,7 @@ function multiplicar(){
     //Obtener el numero
     let elementoTextoTabla = document.getElementById("textoTabla");
     let textoNumeroTabla = elementoTextoTabla.value;
-    let numeroTabla = Number(textoNumeroTabla);
+    let numeroTabla = Number(textoNumeroTabla); //conversion del string a number
 
     //Obtener la tabla
     let elementoTablaMultiplicar = document.getElementById("listaTabla");
