@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="styless.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="formulario">
+        <h2>Añadir Empleado</h2>
+        <p>Legajo: </p>
+        <input type="text" id="idLegajo">
+        <p>Nombre: </p>
+        <input type="text" id="idNombre">
+        <p>Apellidos: </p>
+        <input type="text" id="idApellidos">
+        <p>Fecha de Nacimiento: </p>
+        <input type="date" id="idFechaNacimiento">
+        <p>Cargo: </p>
+        <input type="text" id="idCargo">
+        <br></br>
+        <button onclick="aniadirEmpleado()">Añadir Empleado</button>
+        <p id="mensajeAniadido" class="mensajeAniadido"></p>
+        <button onclick="mostrarEmpleados()">Mostrar Empleados</button>
+    </div>
+    <div id="listaEmpleados" class="listaEmpleados">
+    </div>
+</body>
+</html>

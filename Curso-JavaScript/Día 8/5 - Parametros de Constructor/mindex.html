@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos 5</title>
+</head>
+<body>
+    <script>
+        function Gato(raza, edad){
+            this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.maullar = function(){
+                console.log("Miau");
+            };
+        };
+
+        let greta = new Gato("nenonas", 8);
+        let truman = new Gato("normal", 8);
+    
+        function Empleado(nombre, apellido, edad, cargo) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.edad = edad;
+            this.cargo = cargo;
+
+            this.presentarse = function(){
+                console.log(`Mi nombre es ${this.nombre} ${this.apellido}, soy ${this.cargo} `);
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    display: flex;
+    text-align: center;
+}
+.mensajeAniadido{
+    color: green;
+}
+.formulario{
+    display: block;
+    width:300px;
+    height:50%;
+    border:3px solid rgb(226, 68, 68);
+    border-radius:22px;
+    background-color:#e9c1bf;
+    padding:9px;
+    
+}
+.listaEmpleados{
+    display: block;
+    width:310px;
+    height:auto;
+    border:3px solid rgb(46, 71, 7);
+    border-radius:22px;
+    background-color:rgb(201, 241, 218);
+    padding:9px;
+    margin-left: 10px;
+}
