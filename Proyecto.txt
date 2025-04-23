@@ -1,0 +1,14 @@
+Hacer la base de datos y la pagina para una pagina web donde te tienes que registrar para acceder, despues accedes a la pagina llamada PetConnect y debes añadir al menos una mascota para empezar.
+
+Todo con react, laravel y boostrap.
+
+La pagina web se basa en un espacio para dueños de mascotas y sus mascotas, donde tienes los siguientes apartados:
+
+1.- Apartado para poder agregar y modificar tus mascotas.
+2.- Apartado para poder ver actividades colectivas de mascotas, donde puedes ver qué actividades hay cerca de tu zona y en que consisten, ademas puedes apuntarte a la actividad.
+3.- Apartado para poder interactuar poniendo comentarios en diferentes tipos de actividades como rutas de paseo, paseos colectivos y actividades conjuntas.
+4.- Apartado para mascotas perdidas, donde salen todas las mascotas perdidas con comenarios del dueño acerca de la desaparicio. Ademas puedes avisar si has visto una mascota perdida, decir donde, añadir fotos, localizacion o un comentario explicativo. O en su defecto podras generar un aviso de que has perdido tu mascota
+
+Este es un trabajo de final de grado de un Grado Superior de Desarrollo de Aplicaciones Web.
+
+Hacer la parte de laravel con Breeze que permite avanzar en toda la parte del Backend.
